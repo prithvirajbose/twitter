@@ -13,9 +13,9 @@ if __name__ == '__main__':
             rec_cnt += 1
             try:
                 json_data = json.loads(line)
-                #print json_data['user']['screen_name'], json_data['user']['location']
                 if json_data[sys.argv[2]] is not None:
-                    key_cnt += 1
+					#print json_data['user']['screen_name'], json_data['user']['location'], json_data[sys.argv[2]]
+					key_cnt += 1
             except:
                 continue
 

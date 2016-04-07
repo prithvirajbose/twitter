@@ -17,8 +17,7 @@ class TwitterStreamListener(StreamListener):
         self.fp = fp
         
     def on_data(self, data):
-        d = json.loads(data)
-        json.dump(d, self.fp)
+        json.dump(json.loads(data), self.fp)
         fp.write('\n')
         return True
 
